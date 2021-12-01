@@ -14,17 +14,17 @@ class Contact
 			std::string phone_number;
 			std::string darkest_secret;
 	public:
-			Contact(/* args */);
-			~Contact();
-			std::string GetFirstName();
-			std::string GetLastName();
-			std::string GetNickName();
-			std::string GetPhoneNumber();
-			std::string GetDarkestSecret();
+			Contact(){};
+			~Contact(){};
+			std::string GetFirstName() const;
+			std::string GetLastName() const;
+			std::string GetNickname() const;
+			std::string GetPhoneNumber() const;
+			std::string GetDarkestSecret() const;
 
 			void	SetFirstName(std::string input);
 			void	SetLastName(std::string input);
-			void	SetNickName(std::string input);
+			void	SetNickname(std::string input);
 			void	SetPhoneNumber(std::string input);
 			void	SetDarkestSecret(std::string input);
 };

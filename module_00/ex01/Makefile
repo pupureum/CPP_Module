@@ -6,16 +6,18 @@
 #    By: plee <plee@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/29 15:56:51 by plee              #+#    #+#              #
-#    Updated: 2021/11/29 15:57:05 by plee             ###   ########.fr        #
+#    Updated: 2021/12/01 17:16:13 by plee             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := phonebook
+NAME := PhoneBook
 
 CC := clang++
-CFLAGS := -Wall -Werror -Wextra
+CFLAGS := -Wall -Werror -Wextra -std=c++98
 
-SRCS := megaphone.cpp
+SRCS := PhoneBook.cpp\
+		Contact.cpp
+
 OBJS := ${SRCS:.cpp=.o}
 
 all : $(NAME)

@@ -5,17 +5,19 @@
 #                                                     +:+ +:+         +:+      #
 #    By: plee <plee@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/11/25 21:39:37 by plee              #+#    #+#              #
-#    Updated: 2021/12/01 17:16:18 by plee             ###   ########.fr        #
+#    Created: 2021/11/30 15:23:03 by plee              #+#    #+#              #
+#    Updated: 2021/12/01 21:03:08 by plee             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := megaphone
+NAME := Account
 
 CC := clang++
 CFLAGS := -Wall -Werror -Wextra -std=c++98
 
-SRCS := megaphone.cpp
+SRCS := Account.cpp\
+		tests.cpp
+
 OBJS := ${SRCS:.cpp=.o}
 
 all : $(NAME)
