@@ -6,7 +6,7 @@
 /*   By: plee <plee@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 15:26:34 by plee              #+#    #+#             */
-/*   Updated: 2021/12/02 15:26:35 by plee             ###   ########.fr       */
+/*   Updated: 2021/12/02 19:11:54 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ int	Account::getNbWithdrawals( void )
 void	Account::displayAccountsInfos( void )
 {
 	_displayTimestamp();
-	std::cout << "accounts:" << _nbAccounts << ";";
+	std::cout << " accounts:" << _nbAccounts << ";";
 	std::cout << "total" << _totalAmount << ";";
 	std::cout << "deposits:" << _totalNbDeposits << ";";
 	std::cout << "withdrawals:" << _totalNbWithdrawals << "\n";
@@ -98,7 +98,7 @@ void	Account::displayAccountsInfos( void )
 void	Account::displayStatus( void ) const
 {
 	_displayTimestamp();
-	std::cout << "index:" << _accountIndex << ";";
+	std::cout << " index:" << _accountIndex << ";";
 	std::cout << "amount:" << _amount << ";";
 	std::cout << "deposits:" << _nbDeposits << ";";
 	std::cout << "withdrawals:" << _nbWithdrawals << "\n";
@@ -107,7 +107,7 @@ void	Account::displayStatus( void ) const
 void	Account::makeDeposit( int deposit )
 {
 	_displayTimestamp();
-	std::cout << "index:" << _accountIndex << ";";
+	std::cout << " index:" << _accountIndex << ";";
 	std::cout << "p_amount:" << _amount << ";";
 	std::cout << "deposit:" << deposit << ";";
 	std::cout << "amount:" << _amount + _nbDeposits << ";";
@@ -120,7 +120,7 @@ void	Account::makeDeposit( int deposit )
 bool	Account::makeWithdrawal( int withdrawal )
 {
 	_displayTimestamp();
-	std::cout << "index:" << _accountIndex << ";";
+	std::cout << " index:" << _accountIndex << ";";
 	std::cout << "p_amount:" << _amount << ";";
 	if (withdrawal > _amount)
 	{
