@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Karen.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/02 15:27:15 by plee              #+#    #+#             */
-/*   Updated: 2021/12/05 00:34:06 by plee             ###   ########.fr       */
+/*   Created: 2021/12/04 18:04:49 by plee              #+#    #+#             */
+/*   Updated: 2021/12/04 18:12:58 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef KAREN_HPP
+# define KAREN_HPP
 
-Zombie::Zombie(std::string name) : _name(name)
-{
-	std::cout << _name << " Zombie constructor is called" << std::endl;
-}
+# include <iostream>
+# include <string>
 
-Zombie::~Zombie(void)
+class Karen
 {
-	std::cout << _name << " Zombie destructor is called" << std::endl;	
-}
+	private:
+		void debug(void);
+		void info(void);
+		void warning(void);
+		void error(void);
 
-void Zombie::announce(void)
-{
-	std::cout << "<" <<  _name  << ">" << " BraiiiiiiinnnzzzZ..." << std::endl;
-}
+	public:
+		Karen(void);
+		~Karen(void);
+		void complain(std::string level);
+};
+
+#endif

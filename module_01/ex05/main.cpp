@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/02 15:27:15 by plee              #+#    #+#             */
-/*   Updated: 2021/12/05 00:34:06 by plee             ###   ########.fr       */
+/*   Created: 2021/12/04 21:26:30 by plee              #+#    #+#             */
+/*   Updated: 2021/12/04 21:26:31 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Karen.hpp"
 
-Zombie::Zombie(std::string name) : _name(name)
+int	main(void)
 {
-	std::cout << _name << " Zombie constructor is called" << std::endl;
-}
+	Karen karen;
 
-Zombie::~Zombie(void)
-{
-	std::cout << _name << " Zombie destructor is called" << std::endl;	
-}
-
-void Zombie::announce(void)
-{
-	std::cout << "<" <<  _name  << ">" << " BraiiiiiiinnnzzzZ..." << std::endl;
+	karen.complain("DEBUG");
+	karen.complain("INFO");
+	karen.complain("WARNING");
+	karen.complain("ERROR");
+	karen.complain("plee");
+	return (0);
 }

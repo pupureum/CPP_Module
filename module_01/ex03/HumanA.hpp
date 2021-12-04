@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/02 15:27:15 by plee              #+#    #+#             */
-/*   Updated: 2021/12/05 00:34:06 by plee             ###   ########.fr       */
+/*   Created: 2021/12/03 18:56:22 by plee              #+#    #+#             */
+/*   Updated: 2021/12/04 18:10:35 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
 
-Zombie::Zombie(std::string name) : _name(name)
-{
-	std::cout << _name << " Zombie constructor is called" << std::endl;
-}
+# include "Weapon.hpp"
 
-Zombie::~Zombie(void)
+class HumanA
 {
-	std::cout << _name << " Zombie destructor is called" << std::endl;	
-}
+	private:
+		std::string _name;
+		Weapon& _weapon;
 
-void Zombie::announce(void)
-{
-	std::cout << "<" <<  _name  << ">" << " BraiiiiiiinnnzzzZ..." << std::endl;
-}
+	public:
+		HumanA(std::string name, Weapon& weapon);
+		~HumanA(void);
+		void	attack(void);
+};
+
+#endif

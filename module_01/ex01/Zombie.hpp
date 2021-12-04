@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plee <plee@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 20:36:52 by plee              #+#    #+#             */
-/*   Updated: 2021/12/02 21:59:42 by plee             ###   ########.fr       */
+/*   Updated: 2021/12/05 00:11:13 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define ZOMBIE_HPP
 
 # include <iostream>
+# include <sstream>
 
 class Zombie
 {
@@ -22,9 +23,10 @@ class Zombie
 
 	public:
 		Zombie(std::string name);
+		Zombie(void);
 		~Zombie();
-		void	announce(void);
-		setName(std::string name);
+		void announce(void);
+		void setName(std::string name);
 };
 
 Zombie* zombieHorde(int N, std::string name);
