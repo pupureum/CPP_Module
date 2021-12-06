@@ -6,7 +6,7 @@
 /*   By: plee <plee@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 02:39:22 by plee              #+#    #+#             */
-/*   Updated: 2021/12/06 21:10:54 by plee             ###   ########.fr       */
+/*   Updated: 2021/12/06 21:11:34 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,5 @@ void Fixed::setRawBits(int const raw)
 
 void Fixed::setRawBits(float const raw)
 {
-	this->_fixedPoint = roundf(raw *(1 << Fixed::_bits)); 
-	// roundf c++11이므로 고치자
+	this->_fixedPoint = roundf(raw *(1 << Fixed::_bits));
 }
