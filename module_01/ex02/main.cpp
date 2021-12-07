@@ -13,7 +13,7 @@ int	main(void)
 			  << "stringREF : " << &stringREF << std::endl;
 	std::cout << "-------------------------------------" << std::endl;
 	std::cout << "Value!" << std::endl;
-			  << "string : " << string << std::endl
+	std::cout << "string : " << string << std::endl
 			  << "stringPTR : " << *stringPTR << std::endl
 			  << "stringREF : " << stringREF << std::endl;
 }

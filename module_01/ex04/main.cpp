@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
+/*   By: plee <plee@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 18:04:55 by plee              #+#    #+#             */
-/*   Updated: 2021/12/04 18:04:56 by plee             ###   ########.fr       */
+/*   Updated: 2021/12/07 17:27:35 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,6 @@ int	main(int argc, char **argv)
 		newLine = true;
 	}
 	fin.close();
-	fin.close();
+	fout.close();
 	return (0);
 }
