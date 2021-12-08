@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
+/*   By: plee <plee@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 18:56:49 by plee              #+#    #+#             */
-/*   Updated: 2021/12/05 00:45:47 by plee             ###   ########.fr       */
+/*   Updated: 2021/12/08 21:59:52 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	HumanB::attack(void)
 	std::cout << _name << " attacks with his " << _weapon->getType() << std::endl;
 }
 
-void	HumanB::setWeapon(Weapon& weapon)
+void	HumanB::setWeapon(Weapon* weapon)
 {
-	_weapon = &weapon;
+	_weapon = weapon;
 }
