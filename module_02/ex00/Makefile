@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+         #
+#    By: plee <plee@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 15:23:03 by plee              #+#    #+#              #
-#    Updated: 2021/12/05 02:35:40 by plee             ###   ########.fr        #
+#    Updated: 2021/12/09 18:59:34 by plee             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := a.out
+NAME := fixedPoint
 
 CC := clang++
 CFLAGS := -Wall -Werror -Wextra -std=c++98

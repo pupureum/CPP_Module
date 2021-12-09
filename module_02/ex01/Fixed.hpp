@@ -6,7 +6,7 @@
 /*   By: plee <plee@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 02:45:26 by plee              #+#    #+#             */
-/*   Updated: 2021/12/06 16:58:12 by plee             ###   ########.fr       */
+/*   Updated: 2021/12/09 16:54:18 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Fixed
 {
 	private:
 		int _fixedPoint;
-		static const int _bits;
+		static const int _fractional_Bits;
 
 	public:
 		Fixed(void);
@@ -31,7 +31,6 @@ class Fixed
 		Fixed& operator=(const Fixed& fixed);
 		int getRawBits(void) const;
 		void setRawBits(int const raw);
-		void setRawBits(float const raw);
 		float toFloat(void) const;
 		int toInt(void) const;
 };

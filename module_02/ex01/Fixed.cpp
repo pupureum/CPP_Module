@@ -6,25 +6,25 @@
 /*   By: plee <plee@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 02:39:22 by plee              #+#    #+#             */
-/*   Updated: 2021/12/06 21:10:54 by plee             ###   ########.fr       */
+/*   Updated: 2021/12/09 20:57:02 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-const int Fixed::_bits = 8;
+const int Fixed::_fractional_Bits = 8;
 
 Fixed::Fixed(void) : _fixedPoint(0)
 {
 	std::cout << "Default constructor called" << std::endl;
 }
 
-Fixed::Fixed(const int raw) : _fixedPoint(raw << Fixed::_bits)
+Fixed::Fixed(const int raw) : _fixedPoint(raw * (1 << Fixed::_fractional_Bits))
 {
 	std::cout << "Int constructor called" << std::endl;
 }
 
-Fixed::Fixed(float raw) : _fixedPoint(roundf(raw * (1 << Fixed::_bits)))
+Fixed::Fixed(float raw) : _fixedPoint(roundf(raw * (1 << Fixed::_fractional_Bits)))
 {
 	std::cout << "Float constructor called" << std::endl;
 }
@@ -55,12 +55,12 @@ std::ostream& operator<<(std::ostream &os, const Fixed& fixed)
 
 float Fixed::toFloat(void) const
 {
-	return (float)(this->_fixedPoint) / (1 << Fixed::_bits);
+	return (static_cast<float>(this->_fixedPoint) / (1 << Fixed::_fractional_Bits));
 }
 
 int Fixed::toInt(void) const
 {
-	return (this->_fixedPoint >> Fixed::_bits);
+	return (this->_fixedPoint >> Fixed::_fractional_Bits);
 }
 
 int Fixed::getRawBits( void ) const
@@ -70,11 +70,5 @@ int Fixed::getRawBits( void ) const
 
 void Fixed::setRawBits(int const raw)
 {
-	this->_fixedPoint = raw << Fixed::_bits;
-}
-
-void Fixed::setRawBits(float const raw)
-{
-	this->_fixedPoint = roundf(raw *(1 << Fixed::_bits)); 
-	// roundf c++11이므로 고치자
+	this->_fixedPoint = raw << Fixed::_fractional_Bits;
 }

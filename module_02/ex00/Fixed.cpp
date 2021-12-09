@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
+/*   By: plee <plee@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 02:39:22 by plee              #+#    #+#             */
-/*   Updated: 2021/12/05 02:58:09 by plee             ###   ########.fr       */
+/*   Updated: 2021/12/09 16:37:27 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-const int Fixed::_bits = 8;
+const int Fixed::_fractional_Bits = 8;
 
 Fixed::Fixed(void) : _fixedPoint(0)
 {
@@ -46,5 +46,5 @@ int Fixed::getRawBits( void ) const
 void Fixed::setRawBits(int const raw)
 {
 	std::cout << "setRawBits member function called" << std::endl;
-	this->_fixedPoint = raw << Fixed::_bits;
+	this->_fixedPoint = raw << Fixed::_fractional_Bits;
 }
