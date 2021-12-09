@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
+/*   By: plee <plee@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 18:57:00 by plee              #+#    #+#             */
-/*   Updated: 2021/12/03 23:18:44 by plee             ###   ########.fr       */
+/*   Updated: 2021/12/09 16:15:32 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 Weapon::Weapon(std::string type)
 {
 	_type = type;
-	std::cout << "Weapon constructor is callde" << std::endl;
+	std::cout << "Weapon constructor is called" << std::endl;
 }
 
 Weapon::~Weapon(void)
 {
-	std::cout << "Weapon distructor is callde" << std::endl;
+	std::cout << "Weapon destructor is called" << std::endl;
 }
 
 void	Weapon::setType(std::string type)
