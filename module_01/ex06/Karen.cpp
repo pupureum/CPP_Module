@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Karen.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
+/*   By: plee <plee@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 21:27:42 by plee              #+#    #+#             */
-/*   Updated: 2021/12/04 21:59:09 by plee             ###   ########.fr       */
+/*   Updated: 2021/12/09 16:00:58 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,6 @@ void Karen::complain(std::string level)
 	}
 	switch (num)
 	{
-	default:
-		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 		break;
 	case 0:
 		(this->*(f[0]))();
@@ -66,5 +64,8 @@ void Karen::complain(std::string level)
 		(this->*(f[2]))();
 	case 3:
 		(this->*(f[3]))();
+		break;
+	default:
+		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 	}
 }
