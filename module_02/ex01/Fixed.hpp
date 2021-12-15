@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plee <plee@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 02:45:26 by plee              #+#    #+#             */
-/*   Updated: 2021/12/09 16:54:18 by plee             ###   ########.fr       */
+/*   Updated: 2021/12/15 19:33:48 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ class Fixed
 
 	public:
 		Fixed(void);
-		Fixed(int raw);
-		Fixed(float raw);
+		Fixed(const int raw);
+		Fixed(const float raw);
 		Fixed(const Fixed& fixed);
 		~Fixed(void);
 		Fixed& operator=(const Fixed& fixed);

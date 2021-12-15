@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plee <plee@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 02:45:26 by plee              #+#    #+#             */
-/*   Updated: 2021/12/09 20:41:01 by plee             ###   ########.fr       */
+/*   Updated: 2021/12/16 00:43:26 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Fixed
 {
 	private:
 		int _fixedPoint;
-		static const int _bits;
+		static const int _fractional_Bits;
 
 	public:
 		Fixed(void);
