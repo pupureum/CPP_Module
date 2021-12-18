@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Point.cpp                                          :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plee <plee@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/09 21:14:29 by plee              #+#    #+#             */
-/*   Updated: 2021/12/17 15:49:44 by plee             ###   ########.fr       */
+/*   Created: 2021/12/17 01:07:41 by plee              #+#    #+#             */
+/*   Updated: 2021/12/17 20:45:02 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Point.hpp"
+#ifndef SCARVTRAP_HPP
+# define SCARVTRAP_HPP
 
-Point::Point(void) : _x(0), _y(0){}
-Point::~Point(void){}
-Point::Point(const float x, const float y) : _x(x), _y(y){}
+# include "ClapTrap.hpp"
 
-Point::Point(const Point& point)
+class ScavTrap : public ClapTrap
 {
-	*this = point;
-}
+public:
+	ScavTrap(void);
+	ScavTrap(std::string name);
+	ScavTrap(const ScavTrap& scavtrap);
+	~ScavTrap(void);
 
-float Point::getX() const
-{
-	return (_x.toFloat());
-}
+	ScavTrap& operator=(const ScavTrap& scavtrap);
+	void guardGate();
+};
 
-float Point::getY() const
-{
-	return (_y.toFloat());
-}
-
-Point&	Point::operator=(const Point& point)
-{
-	return (*this);
-}
+#endif

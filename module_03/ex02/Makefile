@@ -6,18 +6,19 @@
 #    By: plee <plee@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 15:23:03 by plee              #+#    #+#              #
-#    Updated: 2021/12/17 19:58:22 by plee             ###   ########.fr        #
+#    Updated: 2021/12/17 20:06:01 by plee             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := ScavTrap
+NAME := FragTrap
 
 CC := clang++
 CFLAGS := -Wall -Werror -Wextra -std=c++98
 
 SRCS := main.cpp\
 		ClapTrap.cpp\
-		ScavTrap.cpp
+		ScavTrap.cpp\
+		FragTrap.cpp
 
 OBJS := ${SRCS:.cpp=.o}
 

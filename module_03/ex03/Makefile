@@ -6,18 +6,20 @@
 #    By: plee <plee@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 15:23:03 by plee              #+#    #+#              #
-#    Updated: 2021/12/17 19:58:22 by plee             ###   ########.fr        #
+#    Updated: 2021/12/17 20:59:57 by plee             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := ScavTrap
+NAME := DiamondTrap
 
 CC := clang++
-CFLAGS := -Wall -Werror -Wextra -std=c++98
+CFLAGS := -Wall -Werror -Wextra -Wshadow -Wno-shadow -std=c++98
 
 SRCS := main.cpp\
 		ClapTrap.cpp\
-		ScavTrap.cpp
+		ScavTrap.cpp\
+		FragTrap.cpp\
+		DiamondTrap.cpp
 
 OBJS := ${SRCS:.cpp=.o}
 

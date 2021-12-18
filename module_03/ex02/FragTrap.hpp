@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Point.cpp                                          :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plee <plee@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/09 21:14:29 by plee              #+#    #+#             */
-/*   Updated: 2021/12/17 15:49:44 by plee             ###   ########.fr       */
+/*   Created: 2021/12/17 20:12:44 by plee              #+#    #+#             */
+/*   Updated: 2021/12/17 20:46:53 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Point.hpp"
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
-Point::Point(void) : _x(0), _y(0){}
-Point::~Point(void){}
-Point::Point(const float x, const float y) : _x(x), _y(y){}
+# include "ClapTrap.hpp"
 
-Point::Point(const Point& point)
+class FragTrap : public ClapTrap
 {
-	*this = point;
-}
+public:
+	FragTrap(void);
+	FragTrap(std::string name);
+	FragTrap(const FragTrap& fragtrap);
+	~FragTrap(void);
 
-float Point::getX() const
-{
-	return (_x.toFloat());
-}
+	FragTrap& operator=(const FragTrap& fragtrap);
+	void highFivesGuys(void);
+};
 
-float Point::getY() const
-{
-	return (_y.toFloat());
-}
-
-Point&	Point::operator=(const Point& point)
-{
-	return (*this);
-}
+#endif

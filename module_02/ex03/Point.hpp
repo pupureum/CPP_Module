@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Point.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
+/*   By: plee <plee@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 21:11:10 by plee              #+#    #+#             */
-/*   Updated: 2021/12/16 01:34:41 by plee             ###   ########.fr       */
+/*   Updated: 2021/12/17 15:41:56 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ class Point
 		~Point(void);
 
 		Point& operator=(const Point& point);
-		Point operator-(const Point& point) const;
-		Fixed getX(void) const;
-		Fixed getY(void) const;
-		
+		float getX() const;
+		float getY() const;
 };
 
 bool bsp(Point const a, Point const b, Point const c, Point const point);
+float get_sign(Point const P1, Point const P2, Point const P3);
+
 #endif

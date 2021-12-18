@@ -6,7 +6,7 @@
 #    By: plee <plee@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 15:23:03 by plee              #+#    #+#              #
-#    Updated: 2021/12/09 21:00:37 by plee             ###   ########.fr        #
+#    Updated: 2021/12/17 15:23:33 by plee             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,8 @@ CFLAGS := -Wall -Werror -Wextra -std=c++98
 
 SRCS := main.cpp\
 		Fixed.cpp\
+		Point.cpp\
+		bsp.cpp
 
 OBJS := ${SRCS:.cpp=.o}
 
