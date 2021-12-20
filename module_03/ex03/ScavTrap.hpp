@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plee <plee@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 01:07:41 by plee              #+#    #+#             */
-/*   Updated: 2021/12/17 20:45:02 by plee             ###   ########.fr       */
+/*   Updated: 2021/12/19 23:36:16 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap
+class ScavTrap : public virtual ClapTrap
 {
 public:
 	ScavTrap(void);
@@ -24,6 +24,7 @@ public:
 	~ScavTrap(void);
 
 	ScavTrap& operator=(const ScavTrap& scavtrap);
+	void attack(std::string const & target);
 	void guardGate();
 };
 

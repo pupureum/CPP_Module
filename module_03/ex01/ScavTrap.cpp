@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plee <plee@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 01:07:25 by plee              #+#    #+#             */
-/*   Updated: 2021/12/17 20:44:32 by plee             ###   ########.fr       */
+/*   Updated: 2021/12/19 23:26:44 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(void): ClapTrap()
+ScavTrap::ScavTrap(void): ClapTrap("UnknownScavTrap")
 {	
 	_hitPoints = 100;
 	_energyPoints = 50;
@@ -46,6 +46,12 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& scavTrap)
 	this->_energyPoints = scavTrap.getEnergyPoints();
 	this->_attackDamage = scavTrap.getAttackDamage();
 	return (*this);
+}
+
+void ScavTrap::attack(std::string const & target)
+{
+	std::cout << "ScavTrap <" << _name << "> attack <" << target
+			  << ">, causing <" << _attackDamage << "> points of damage" << std::endl;
 }
 
 void ScavTrap::guardGate()

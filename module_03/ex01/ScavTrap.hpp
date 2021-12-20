@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plee <plee@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 01:07:41 by plee              #+#    #+#             */
-/*   Updated: 2021/12/17 20:44:36 by plee             ###   ########.fr       */
+/*   Updated: 2021/12/19 23:12:35 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ public:
 	~ScavTrap(void);
 
 	ScavTrap& operator=(const ScavTrap& scavtrap);
+	void attack(std::string const & target);
 	void guardGate();
 };
 
