@@ -6,7 +6,7 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 22:54:22 by plee              #+#    #+#             */
-/*   Updated: 2021/12/17 01:41:46 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/09 00:54:36 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,6 @@ int main(void)
 	b.takeDamage(a.getAttackDamage());
 	std::cout << std::endl;
 
-	b.attack(a.getName());
-	a.takeDamage(b.getAttackDamage());
-	std::cout << std::endl;
-	
 	b.guardGate();
 	std::cout << std::endl;
 	return (0);

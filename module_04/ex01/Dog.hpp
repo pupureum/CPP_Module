@@ -1,30 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/17 20:12:44 by plee              #+#    #+#             */
-/*   Updated: 2022/01/09 02:25:12 by plee             ###   ########.fr       */
+/*   Created: 2022/01/10 20:10:49 by plee              #+#    #+#             */
+/*   Updated: 2022/01/10 23:59:38 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef DOG_HPP
+# define DOG_HPP
 
-# include "ClapTrap.hpp"
+# include "Animal.hpp"
 
-class FragTrap : virtual public ClapTrap
+class Dog : public Animal
 {
 public:
-	FragTrap(void);
-	FragTrap(std::string name);
-	FragTrap(const FragTrap& fragtrap);
-	~FragTrap(void);
+	Dog(void);
+	Dog(const Dog& Dog);
+	~Dog(void);
+	
+	Dog& operator=(const Dog& Dog);
 
-	FragTrap& operator=(const FragTrap& fragtrap);
-	void highFivesGuys(void);
+	void makeSound() const;
+};
+
+class WrongDog : public WrongAnimal
+{
+public:
+	WrongDog(void);
+	WrongDog(const WrongDog& wrong_dog);
+	~WrongDog(void);
+	
+	WrongDog& operator=(const WrongDog& wrong_dog);
+
+	void makeSound() const;
 };
 
 #endif

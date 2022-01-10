@@ -6,16 +6,16 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 01:07:41 by plee              #+#    #+#             */
-/*   Updated: 2021/12/19 23:36:16 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/10 14:56:40 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCARVTRAP_HPP
-# define SCARVTRAP_HPP
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
 # include "ClapTrap.hpp"
 
-class ScavTrap : public virtual ClapTrap
+class ScavTrap : virtual public ClapTrap
 {
 public:
 	ScavTrap(void);

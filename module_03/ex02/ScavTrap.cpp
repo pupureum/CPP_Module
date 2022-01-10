@@ -6,7 +6,7 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 01:07:25 by plee              #+#    #+#             */
-/*   Updated: 2021/12/19 23:27:05 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/09 02:14:49 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ ScavTrap::ScavTrap(const ScavTrap& scavTrap)
 
 ScavTrap::~ScavTrap(void)
 {
-	std::cout << "ScavTrap has been destroyed" << std::endl;
+	std::cout << "ScavTrap <" << _name << "> has been destroyed" << std::endl;
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& scavTrap)
@@ -51,7 +51,7 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& scavTrap)
 void ScavTrap::attack(std::string const & target)
 {
 	std::cout << "ScavTrap <" << _name << "> attack <" << target
-			  << ">, causing <" << _attackDamage << "> points of damage" << std::endl;
+			  << ">, causing <" << _attackDamage << "> points of damage!" << std::endl;
 }
 
 void ScavTrap::guardGate()

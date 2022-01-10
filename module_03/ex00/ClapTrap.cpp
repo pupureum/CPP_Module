@@ -6,7 +6,7 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 22:54:17 by plee              #+#    #+#             */
-/*   Updated: 2021/12/19 23:26:02 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/09 00:28:49 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ ClapTrap::ClapTrap(const ClapTrap& claptrap)
 
 ClapTrap::~ClapTrap(void)
 {
-	std::cout << "ClapTrap has been destroyed" << std::endl;
+	std::cout << "ClapTrap <" << _name << "> has been destroyed" << std::endl;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& clapTrap)
@@ -49,23 +49,23 @@ std::string ClapTrap::getName() const
 
 unsigned int ClapTrap::getHitPoints() const
 {
-	return this->_hitPoints;
+	return (this->_hitPoints);
 }
 
 unsigned int ClapTrap::getEnergyPoints() const
 {
-	return this->_energyPoints;
+	return (this->_energyPoints);
 }
 
 unsigned int ClapTrap::getAttackDamage() const
 {
-	return this->_attackDamage;
+	return (this->_attackDamage);
 }
 
 void ClapTrap::attack(std::string const & target)
 {
 	std::cout << "ClapTrap <" << _name << "> attack <" << target
-			  << ">, causing <" << _attackDamage << "> points of damage" << std::endl;
+			  << ">, causing <" << _attackDamage << "> points of damage!" << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)

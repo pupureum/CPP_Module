@@ -6,7 +6,7 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 20:12:49 by plee              #+#    #+#             */
-/*   Updated: 2021/12/21 03:20:09 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/10 14:28:43 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ FragTrap::FragTrap() : ClapTrap("UnknownFragTrap")
 	_hitPoints = 100;
 	_energyPoints = 100;
 	_attackDamage = 30;
-	std::cout << "Default ScavTrap was created" << std::endl;
+	std::cout << "Default FragTrap was created" << std::endl;
 }
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
@@ -30,13 +30,13 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 
 FragTrap::FragTrap(const FragTrap& fragTrap)
 {
-	std::cout << "Copy ScavTrap was created" << std::endl;
+	std::cout << "Copy FragTrap was created" << std::endl;
 	*this = fragTrap;
 }
 
 FragTrap::~FragTrap(void)
 {
-	std::cout << "FragTrap has been destroyed" << std::endl;
+	std::cout << "FragTrap <" << _name << "> has been destroyed" << std::endl;
 }
 
 FragTrap& FragTrap::operator=(const FragTrap& fragTrap)

@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/17 20:12:44 by plee              #+#    #+#             */
-/*   Updated: 2022/01/09 02:25:12 by plee             ###   ########.fr       */
+/*   Created: 2022/01/11 02:02:42 by plee              #+#    #+#             */
+/*   Updated: 2022/01/11 03:30:34 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-# include "ClapTrap.hpp"
+# include <iostream>
+# include <string>
 
-class FragTrap : virtual public ClapTrap
+class Brain
 {
-public:
-	FragTrap(void);
-	FragTrap(std::string name);
-	FragTrap(const FragTrap& fragtrap);
-	~FragTrap(void);
+private:
+	std::string _ideas[100];
 
-	FragTrap& operator=(const FragTrap& fragtrap);
-	void highFivesGuys(void);
+public:
+	Brain(void);
+	Brain(const Brain& brain);
+	~Brain(void);
+
+	Brain& operator=(const Brain& brain);
+	void setIdeas(int idx, const std::string& idea);
+	std::string getIdeas(int index) const;
 };
 
 #endif

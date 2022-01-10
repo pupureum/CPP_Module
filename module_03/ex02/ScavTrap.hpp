@@ -6,12 +6,12 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 01:07:41 by plee              #+#    #+#             */
-/*   Updated: 2021/12/19 23:14:29 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/09 00:48:49 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCARVTRAP_HPP
-# define SCARVTRAP_HPP
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
 # include "ClapTrap.hpp"
 

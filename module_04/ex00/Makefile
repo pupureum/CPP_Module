@@ -5,35 +5,38 @@
 #                                                     +:+ +:+         +:+      #
 #    By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/11/30 15:23:03 by plee              #+#    #+#              #
-#    Updated: 2022/01/09 00:24:06 by plee             ###   ########.fr        #
+#    Created: 2022/01/10 22:40:31 by plee              #+#    #+#              #
+#    Updated: 2022/01/11 00:41:24 by plee             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := ClapTrap
+NAME	=	Animals
 
-CC := clang++
-CFLAGS := -Wall -Werror -Wextra -std=c++98
+CC		=	clang++
+CFLAGS	=	-Wall -Wextra -Werror -std=c++98
+RM		=	rm -rf
 
-SRCS := main.cpp\
-		ClapTrap.cpp\
+SRCS	=	Animal.cpp\
+			Cat.cpp\
+			Dog.cpp\
+			main.cpp
 
-OBJS := ${SRCS:.cpp=.o}
+OBJS	=	$(SRCS:.cpp=.o)
 
 .cpp.o :
 	$(CC) $(CFLAGS) -c $< -o $(<:.cpp=.o)
 
-$(NAME): $(OBJS)
-		$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
+$(NAME) : $(OBJS)
+	$(CC) $(CFLAGS) -o $(NAME) $^
 
 all : $(NAME)
 
-clean:
-			rm -f $(OBJS)
+clean :
+	$(RM) $(OBJS)
 
-fclean: clean
-			rm -rf $(NAME)
+fclean : clean
+	$(RM) $(NAME)
 
-re: fclean all
+re : fclean all
 
-.PHONY: all clean fclean re
+.PHONY : all clean fclean re

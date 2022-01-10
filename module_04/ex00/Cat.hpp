@@ -1,30 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/17 20:12:44 by plee              #+#    #+#             */
-/*   Updated: 2022/01/09 02:25:12 by plee             ###   ########.fr       */
+/*   Created: 2022/01/10 19:58:22 by plee              #+#    #+#             */
+/*   Updated: 2022/01/10 23:59:43 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef CAT_HPP
+# define CAT_HPP
 
-# include "ClapTrap.hpp"
+# include "Animal.hpp"
 
-class FragTrap : virtual public ClapTrap
+class Cat : public Animal
 {
 public:
-	FragTrap(void);
-	FragTrap(std::string name);
-	FragTrap(const FragTrap& fragtrap);
-	~FragTrap(void);
+	Cat(void);
+	Cat(const Cat& cat);
+	~Cat(void);
+	
+	Cat& operator=(const Cat& cat);
 
-	FragTrap& operator=(const FragTrap& fragtrap);
-	void highFivesGuys(void);
+	void makeSound() const;
+};
+
+class WrongCat : public WrongAnimal
+{
+public:
+	WrongCat(void);
+	WrongCat(const WrongCat& wrong_cat);
+	~WrongCat(void);
+
+	WrongCat& operator=(const WrongCat& wrong_cat);
+
+	void makeSound() const;
 };
 
 #endif
