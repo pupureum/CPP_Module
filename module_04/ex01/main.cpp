@@ -6,43 +6,64 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 18:26:26 by plee              #+#    #+#             */
-/*   Updated: 2022/01/11 00:41:07 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/11 21:20:39 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
 #include "Cat.hpp"
+#include "Dog.hpp"
 
-int main(void)
+int	main(void)
 {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
+	//test1
+	const Animal	*j = new Dog();
+	const Animal	*i = new Cat();
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound();
-	j->makeSound();
-	meta->makeSound();
-
-	delete i;
 	delete j;
-	delete meta;
+	delete i;
+	std::cout << std::endl;
 	std::cout << std::endl;
 
-	const WrongAnimal* beta = new WrongAnimal();
-	const WrongAnimal* b = new WrongDog();
-	const WrongAnimal* a = new WrongCat();
+	//test2 array
+	const Animal*	animals[4];
 
-	std::cout << b->getType() << " " << std::endl;
-	std::cout << a->getType() << " " << std::endl;
+	for (int i = 0; i < 4; i++)
+	{
+		if (i < 2) animals[i] = new Dog();
+			else animals[i] = new Cat();
+	}
 
-	a->makeSound();
-	b->makeSound();
-	beta->makeSound();
-	
-	delete a;
-	delete b;
-	delete beta;
+	for (int i = 0; i < 4; i++) {
+		delete animals[i];
+	}
+	std::cout << std::endl;
+	std::cout << std::endl;
+
+	//test3 assign operator
+	Dog dog;
+	Brain  	*dogBrain = dog.getBrain();
+	dogBrain->setIdeas(1, "EAT");
+	std::cout << "Dog: " << dogBrain->getIdeas(1) << std::endl;
+	std::cout << std::endl;
+
+	Dog dog_copy;
+	Brain   *copiedDogBrain = dog_copy.getBrain();
+	copiedDogBrain->setIdeas(1, "SLEEP");
+	std::cout << "Dog copy: " << copiedDogBrain->getIdeas(1) << std::endl;
+	std::cout << std::endl;
+
+	dog_copy = dog;
+	std::cout << "Dog copy: " << copiedDogBrain->getIdeas(1) << std::endl;
+	std::cout << std::endl;
+	std::cout << std::endl;
+
+	//test4 copy constructor
+	Cat *cat = new Cat();
+	std::cout << std::endl;
+	Cat *cat_copy = new Cat(*cat);
+	std::cout << std::endl;
+
+	delete cat_copy;
+	delete cat;
 	return (0);
 }

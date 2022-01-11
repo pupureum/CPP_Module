@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/11 02:02:42 by plee              #+#    #+#             */
-/*   Updated: 2022/01/11 17:55:08 by plee             ###   ########.fr       */
+/*   Created: 2022/01/10 18:27:34 by plee              #+#    #+#             */
+/*   Updated: 2022/01/11 18:15:11 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-# define BRAIN_HPP
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
 # include <iostream>
 # include <string>
 
-class Brain
+class Animal
 {
-private:
-	std::string _ideas[100];
+protected:
+	std::string _type;
 
 public:
-	Brain(void);
-	Brain(const Brain& brain);
-	~Brain(void);
+	Animal(void);
+	Animal(const std::string type);
+	Animal(const Animal& animal);
+	virtual ~Animal(void);
 
-	Brain& operator=(const Brain& brain);
-	void setIdeas(int idx, const std::string idea);
-	std::string getIdeas(int index) const;
+	Animal& operator=(const Animal& animal);
+
+	std::string getType() const;
+	virtual void makeSound() const = 0;
 };
 
 #endif

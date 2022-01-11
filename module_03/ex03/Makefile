@@ -6,11 +6,11 @@
 #    By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 15:23:03 by plee              #+#    #+#              #
-#    Updated: 2022/01/10 14:21:30 by plee             ###   ########.fr        #
+#    Updated: 2022/01/12 03:35:52 by plee             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := DiamondTrap
+NAME := diamondtrap
 
 CC := clang++
 CFLAGS := -Wall -Werror -Wextra -Wshadow -Wno-shadow -std=c++98

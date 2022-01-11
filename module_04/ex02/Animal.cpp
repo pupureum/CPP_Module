@@ -1,52 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/10 20:12:35 by plee              #+#    #+#             */
-/*   Updated: 2022/01/11 17:20:56 by plee             ###   ########.fr       */
+/*   Created: 2022/01/10 18:14:32 by plee              #+#    #+#             */
+/*   Updated: 2022/01/11 21:17:19 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+/* Animal Class */
 
-/* Cat Class */
+#include "Animal.hpp"
 
-Cat::Cat(void) : Animal("Cat")
+Animal::Animal(void) : _type("Animal")
 {
 	std::cout << "Default " << _type << " created" << std::endl;
-	_brain = new Brain;
 }
 
-Cat::Cat(const Cat& cat)
+Animal::Animal(const std::string type) : _type(type)
 {
+	std::cout << "Animal : " << _type << " was created" << std::endl;
+}
+
+Animal::Animal(const Animal& animal) 
+{
+	_type = animal._type;
 	std::cout << "<" << _type << "> copy constructed" << std::endl;
-	_type = cat._type;
-	_brain = new Brain(*cat._brain);
 }
 
-Cat::~Cat(void)
+Animal::~Animal(void)
 {
-	std::cout << "<" << _type << "> destroyed" << std::endl;
-	if (_brain)
-		delete _brain;
+	std::cout << "Animal <" << _type << "> destroyed" << std::endl;
 }
 
-Cat& Cat::operator=(const Cat& cat)
+Animal& Animal::operator=(const Animal& animal)
 {
-	_type = cat._type;
-	*_brain = *cat._brain;
+	_type = animal._type;
 	return (*this);
 }
 
-void Cat::makeSound() const
+std::string Animal::getType(void) const
 {
-	std::cout << "Meow" << std::endl;
+	return (_type);
 }
 
-Brain* Cat::getBrain(void) const
-{
-	return(_brain);
-}

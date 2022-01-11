@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/11 02:02:42 by plee              #+#    #+#             */
-/*   Updated: 2022/01/11 17:55:08 by plee             ###   ########.fr       */
+/*   Created: 2022/01/10 18:26:26 by plee              #+#    #+#             */
+/*   Updated: 2022/01/11 21:30:33 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-# define BRAIN_HPP
+#include "Cat.hpp"
+#include "Dog.hpp"
 
-# include <iostream>
-# include <string>
-
-class Brain
+int	main(void)
 {
-private:
-	std::string _ideas[100];
+	const Animal	*cat = new Cat();
+	const Animal	*dog = new Dog();
+	// const Animal	*animal = new Animal();
 
-public:
-	Brain(void);
-	Brain(const Brain& brain);
-	~Brain(void);
-
-	Brain& operator=(const Brain& brain);
-	void setIdeas(int idx, const std::string idea);
-	std::string getIdeas(int index) const;
-};
-
-#endif
+	std::cout << cat->getType() << " " << std::endl;
+	std::cout << dog->getType() << " " << std::endl;
+	cat->makeSound();
+	dog->makeSound();
+	delete cat;
+	delete dog;
+	return(0);
+}

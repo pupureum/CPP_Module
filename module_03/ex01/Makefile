@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: plee <plee@student.42.fr>                  +#+  +:+       +#+         #
+#    By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 15:23:03 by plee              #+#    #+#              #
-#    Updated: 2021/12/17 19:58:22 by plee             ###   ########.fr        #
+#    Updated: 2022/01/12 03:35:35 by plee             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := ScavTrap
+NAME := scavtrap
 
 CC := clang++
 CFLAGS := -Wall -Werror -Wextra -std=c++98

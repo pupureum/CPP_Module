@@ -6,11 +6,11 @@
 #    By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 15:23:03 by plee              #+#    #+#              #
-#    Updated: 2022/01/09 00:24:06 by plee             ###   ########.fr        #
+#    Updated: 2022/01/12 03:35:40 by plee             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := ClapTrap
+NAME := claptrap
 
 CC := clang++
 CFLAGS := -Wall -Werror -Wextra -std=c++98

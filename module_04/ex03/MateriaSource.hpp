@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/11 02:02:42 by plee              #+#    #+#             */
-/*   Updated: 2022/01/11 17:55:08 by plee             ###   ########.fr       */
+/*   Created: 2022/01/12 03:08:34 by plee              #+#    #+#             */
+/*   Updated: 2022/01/12 03:18:12 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-# define BRAIN_HPP
+#ifndef MATERIASOURCE_HPP
+# define MATERIASOURCE_HPP
 
-# include <iostream>
-# include <string>
+# include "IMateriaSource.hpp"
 
-class Brain
+class MateriaSource : public IMateriaSource
 {
 private:
-	std::string _ideas[100];
+	AMateria* _inventory[4];
 
 public:
-	Brain(void);
-	Brain(const Brain& brain);
-	~Brain(void);
+	MateriaSource(void);
+	MateriaSource(const MateriaSource& materia_source);
+	~MateriaSource(void);
 
-	Brain& operator=(const Brain& brain);
-	void setIdeas(int idx, const std::string idea);
-	std::string getIdeas(int index) const;
+	MateriaSource& operator=(const MateriaSource& materia_source);
+	void learnMateria(AMateria*);
+	AMateria* createMateria(std::string const & type);
 };
 
 #endif

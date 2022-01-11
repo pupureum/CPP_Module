@@ -6,11 +6,11 @@
 #    By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/10 22:40:31 by plee              #+#    #+#              #
-#    Updated: 2022/01/11 00:41:24 by plee             ###   ########.fr        #
+#    Updated: 2022/01/12 03:36:05 by plee             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	Animals
+NAME	=	animals
 
 CC		=	clang++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
@@ -19,6 +19,7 @@ RM		=	rm -rf
 SRCS	=	Animal.cpp\
 			Cat.cpp\
 			Dog.cpp\
+			Brain.cpp\
 			main.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
