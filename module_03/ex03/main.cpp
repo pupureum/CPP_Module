@@ -6,7 +6,7 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 22:54:22 by plee              #+#    #+#             */
-/*   Updated: 2022/01/10 18:08:53 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/12 17:30:42 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,6 @@ int main(void)
 	std::cout << std::endl;
 	a.whoAmI();
 	b.whoAmI();
+	std::cout << std::endl;
 	return (0);
 }

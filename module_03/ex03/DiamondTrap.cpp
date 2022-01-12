@@ -6,22 +6,24 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 20:49:25 by plee              #+#    #+#             */
-/*   Updated: 2022/01/10 15:20:09 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/12 17:30:48 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(void) : ClapTrap(std::string("Unknown") + "_clap_name"), _name("UnknownDiamondTrap")
+DiamondTrap::DiamondTrap(void) : ScavTrap(), FragTrap(), _name("UnknownDiamondTrap")
 {
+	ClapTrap::_name = _name + "_clap_name";
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_attackDamage = 30;
 	std::cout << "Default DiamondTrap was created" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), _name(name)
+DiamondTrap::DiamondTrap(std::string name) : ScavTrap(), FragTrap(), _name(name)
 {
+	ClapTrap::_name = _name + "_clap_name";
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_attackDamage = 30;
