@@ -6,7 +6,7 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 23:48:32 by plee              #+#    #+#             */
-/*   Updated: 2022/01/12 03:02:57 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/13 05:12:14 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,10 @@ Character::Character(const Character& character) : _name(character._name)
 Character::~Character(void)
 {
 	for(int i = 0; i < 4; i++)
-		delete _inventory[i];
+	{
+		if (_inventory[i] != NULL)
+			delete _inventory[i];
+	}
 }
 
 Character& Character::operator=(const Character& character)
@@ -46,7 +49,9 @@ Character& Character::operator=(const Character& character)
 	_name = character.getName();
 	for(int i = 0; i < 4; i++)
 	{
-		if (_inventory[i] != NULL)
+		if (_inventory[i])
+			delete _inventory[i];
+		if (character._inventory[i])
 			_inventory[i] = character._inventory[i]->clone();
 		else
 			_inventory[i] = NULL;
@@ -82,5 +87,5 @@ void Character::use(int idx, ICharacter& target)
 {
 	if (idx < 0 || idx > 3 || _inventory[idx] == NULL)
 		return ;
-	_inventory[idx]->use(target); //Cure 또는 Ice의 use 호출
+	_inventory[idx]->use(target);
 }

@@ -6,7 +6,7 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 18:26:26 by plee              #+#    #+#             */
-/*   Updated: 2022/01/11 21:20:39 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/13 04:03:54 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,20 +40,25 @@ int	main(void)
 	std::cout << std::endl;
 
 	//test3 assign operator
-	Dog dog;
-	Brain  	*dogBrain = dog.getBrain();
+	Dog	dog;
+	Brain	*dogBrain = dog.getBrain();
 	dogBrain->setIdeas(1, "EAT");
+	dogBrain->setIdeas(2, "EAT2");
 	std::cout << "Dog: " << dogBrain->getIdeas(1) << std::endl;
+	std::cout << "Dog: " << dogBrain->getIdeas(2) << std::endl;
 	std::cout << std::endl;
 
-	Dog dog_copy;
-	Brain   *copiedDogBrain = dog_copy.getBrain();
+	Dog	dog_copy;
+	Brain	*copiedDogBrain = dog_copy.getBrain();
 	copiedDogBrain->setIdeas(1, "SLEEP");
+	copiedDogBrain->setIdeas(2, "SLEEP2");
 	std::cout << "Dog copy: " << copiedDogBrain->getIdeas(1) << std::endl;
+	std::cout << "Dog copy: " << copiedDogBrain->getIdeas(2) << std::endl;
 	std::cout << std::endl;
 
 	dog_copy = dog;
 	std::cout << "Dog copy: " << copiedDogBrain->getIdeas(1) << std::endl;
+	std::cout << "Dog copy: " << copiedDogBrain->getIdeas(2) << std::endl;
 	std::cout << std::endl;
 	std::cout << std::endl;
 

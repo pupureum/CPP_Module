@@ -6,7 +6,7 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 03:08:34 by plee              #+#    #+#             */
-/*   Updated: 2022/01/12 03:18:12 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/13 05:32:05 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
 	~MateriaSource(void);
 
 	MateriaSource& operator=(const MateriaSource& materia_source);
-	void learnMateria(AMateria*);
+	void learnMateria(AMateria* m);
 	AMateria* createMateria(std::string const & type);
 };
 

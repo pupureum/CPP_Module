@@ -6,7 +6,7 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 22:37:46 by plee              #+#    #+#             */
-/*   Updated: 2022/01/11 17:20:37 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/13 04:08:05 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ Dog& Dog::operator=(const Dog& dog)
 
 void Dog::makeSound() const
 {
-	std::cout << "Woof" << std::endl;
+	std::cout << "Woof!" << std::endl;
 }
 
 Brain* Dog::getBrain(void) const

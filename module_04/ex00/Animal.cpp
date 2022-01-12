@@ -6,7 +6,7 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 18:14:32 by plee              #+#    #+#             */
-/*   Updated: 2022/01/10 23:55:27 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/13 01:40:03 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Animal::Animal(const Animal& animal)
 
 Animal::~Animal(void)
 {
-	std::cout << "<" << _type << "> destroyed" << std::endl;
+	std::cout << "Animal <" << _type << "> destroyed" << std::endl;
 }
 
 Animal& Animal::operator=(const Animal& animal)
@@ -48,7 +48,7 @@ std::string Animal::getType(void) const
 
 void Animal::makeSound(void) const
 {
-	std::cout << "Animal" << std::endl;
+	std::cout << "Animal!" << std::endl;
 }
 
 /* WrongAnimal Class */
@@ -60,7 +60,7 @@ WrongAnimal::WrongAnimal(void) : _type("WrongAnimal")
 
 WrongAnimal::WrongAnimal(const std::string type) : _type(type)
 {
-	std::cout << "<" << _type << "> created" << std::endl;
+	std::cout << "WrongAnimal : <" << _type << "> created" << std::endl;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal& wrong_animal)
@@ -87,5 +87,5 @@ std::string WrongAnimal::getType(void) const
 
 void WrongAnimal::makeSound(void) const
 {
-	std::cout << "Wrong animal" << std::endl;
+	std::cout << "Wrong animal!" << std::endl;
 }

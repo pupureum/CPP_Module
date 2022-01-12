@@ -6,7 +6,7 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 18:27:34 by plee              #+#    #+#             */
-/*   Updated: 2022/01/11 00:40:18 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/13 00:52:02 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ public:
 	WrongAnimal(void);
 	WrongAnimal(const std::string type);
 	WrongAnimal(const WrongAnimal& wrong_animal);
-	virtual ~WrongAnimal(void);
+	~WrongAnimal(void);
 
 	WrongAnimal& operator=(const WrongAnimal& wrong_animal);
 

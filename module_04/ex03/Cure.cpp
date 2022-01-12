@@ -6,7 +6,7 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 03:22:14 by plee              #+#    #+#             */
-/*   Updated: 2022/01/12 03:33:13 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/13 04:23:28 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ AMateria* Cure::clone(void) const
 
 void Cure::use(ICharacter& target)
 {
-	std::cout << "* heals " << target.getName() << "'s wounds *\n";
+	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }

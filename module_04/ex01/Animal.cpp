@@ -6,7 +6,7 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 18:14:32 by plee              #+#    #+#             */
-/*   Updated: 2022/01/11 18:15:56 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/13 01:02:31 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,5 @@ std::string Animal::getType(void) const
 
 void Animal::makeSound(void) const
 {
-	std::cout << "Animal" << std::endl;
+	std::cout << "Animal!" << std::endl;
 }

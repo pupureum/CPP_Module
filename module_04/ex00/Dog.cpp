@@ -6,7 +6,7 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 22:37:46 by plee              #+#    #+#             */
-/*   Updated: 2022/01/11 00:01:59 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/13 01:38:14 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,8 @@ Dog::Dog(void) : Animal("Dog")
 	std::cout << "Default " << _type << " created" << std::endl;
 }
 
-Dog::Dog(const Dog& dog)
+Dog::Dog(const Dog& dog) : Animal(dog)
 {
-	_type = dog._type;
 	std::cout << "<" << _type << "> copy constructed" << std::endl;
 }
 
@@ -38,7 +37,7 @@ Dog& Dog::operator=(const Dog& dog)
 
 void Dog::makeSound() const
 {
-	std::cout << "Woof" << std::endl;
+	std::cout << "Woof!" << std::endl;
 }
 
 /* WrongDog Class */
@@ -48,9 +47,8 @@ WrongDog::WrongDog(void) : WrongAnimal("WrongDog")
 	std::cout << "Default " << _type << " created" << std::endl;
 }
 
-WrongDog::WrongDog(const WrongDog& wrong_dog)
+WrongDog::WrongDog(const WrongDog& wrong_dog) : WrongAnimal(wrong_dog)
 {
-	_type = wrong_dog._type;
 	std::cout << "<" << _type << "> copy constructed" << std::endl;
 }
 
@@ -67,5 +65,5 @@ WrongDog& WrongDog::operator=(const WrongDog& wrong_dog)
 
 void WrongDog::makeSound() const
 {
-	std::cout << "Woof" << std::endl;
+	std::cout << "Woof!" << std::endl;
 }
