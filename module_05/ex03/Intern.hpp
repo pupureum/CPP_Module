@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/14 00:51:45 by plee              #+#    #+#             */
-/*   Updated: 2022/01/15 04:53:52 by plee             ###   ########.fr       */
+/*   Created: 2022/01/15 04:30:47 by plee              #+#    #+#             */
+/*   Updated: 2022/01/15 04:57:32 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#ifndef INTERN_HPP
+# define INTERN_HPP
 
-int   main()
+# include "ShrubberyCreationForm.hpp"
+# include "RobotomyRequestForm.hpp"
+# include "PresidentialPardonForm.hpp"
+
+class Intern
 {
-	Bureaucrat a("a", 0);
-	Bureaucrat b("b", 151);
-	std::cout << std::endl;
+public:
+	Intern(void);
+	Intern(const Intern& intern);
+	~Intern(void);
+	Intern& operator=(const Intern& intern);
 
-	Bureaucrat plee("plee", 149);
-	plee.downGrade();
-	plee.downGrade();
-	plee.downGrade();
+	Form* makeForm(std::string name, std::string target);
+};
 
-	std::cout << plee << std::endl;
-	std::cout << std::endl;
-
-	Bureaucrat lee("lee", 2);
-	lee.upGrade();
-	lee.upGrade();
-	lee.upGrade();
-
-	std::cout << lee << std::endl;
-
-	return (0);
-}
+#endif

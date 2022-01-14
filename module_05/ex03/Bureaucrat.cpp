@@ -6,11 +6,12 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 21:40:39 by plee              #+#    #+#             */
-/*   Updated: 2022/01/15 04:54:32 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/15 04:50:40 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 Bureaucrat::Bureaucrat(void) : _name("Default"), _grade(150) {}
 
@@ -81,6 +82,35 @@ void Bureaucrat::downGrade(void)
 	}	
 }
 
+void Bureaucrat::signForm(Form& form)
+{
+	try
+	{
+		if (form.beSigned(*this) == true)
+			std::cout << "bureaucrat <" << _name << "> signs form <" << form.getName() << ">" << std::endl;
+		else
+			throw GradeTooLowException("");
+	}
+	catch (std::exception& e)
+	{
+		std::cout << "bureaucrat <" << _name << "> cannot sign <"
+		<< form.getName() << "> because bureaucrat has lower grade than <" << form.getGradeToSign() << ">" << e.what() << std::endl;
+	}
+}
+
+void  Bureaucrat::executeForm(Form const & form)
+{
+	try
+	{
+		form.execute(*this);
+		std::cout << "<" << _name << "> executes <" << form.getName() << ">" << std::endl;
+	}
+	catch (std::exception &e)
+	{
+		std::cout << "<" << _name << "> cannot execute <" << form.getName() << "> because " << e.what() << std::endl;
+	}
+}
+
 Bureaucrat::GradeTooHighException::GradeTooHighException(const char* message) : _message(message) {}
 
 Bureaucrat::GradeTooHighException::~GradeTooHighException() throw() {};
@@ -101,6 +131,6 @@ const char *Bureaucrat::GradeTooLowException::what() const throw()
 
 std::ostream& operator<<(std::ostream& os, Bureaucrat& breaucrat)
 {
-  os << "<" << breaucrat.getName() << ">, bureaucrat grade <" << breaucrat.getGrade() << ">";
-  return (os);
+	os << "<" << breaucrat.getName() << ">, bureaucrat grade <" << breaucrat.getGrade() << ">";
+	return (os);
 }

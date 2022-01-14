@@ -6,7 +6,7 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 19:01:50 by plee              #+#    #+#             */
-/*   Updated: 2022/01/14 22:37:08 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/15 00:05:30 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ public:
 	void upGrade(void);
 	void downGrade(void);
 	void signForm(Form& form);
+	void executeForm(Form const & form);
 
 	class GradeTooHighException : public std:: exception
 	{

@@ -6,32 +6,31 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 00:51:45 by plee              #+#    #+#             */
-/*   Updated: 2022/01/15 04:53:52 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/15 05:41:41 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#include "Intern.hpp"
 
-int   main()
+int main(void)
 {
-	Bureaucrat a("a", 0);
-	Bureaucrat b("b", 151);
-	std::cout << std::endl;
+	try
+	{
+		Intern	someRandomIntern;
+		Form*	rrf;
 
-	Bureaucrat plee("plee", 149);
-	plee.downGrade();
-	plee.downGrade();
-	plee.downGrade();
+		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+		delete rrf;
 
-	std::cout << plee << std::endl;
-	std::cout << std::endl;
-
-	Bureaucrat lee("lee", 2);
-	lee.upGrade();
-	lee.upGrade();
-	lee.upGrade();
-
-	std::cout << lee << std::endl;
+		rrf = someRandomIntern.makeForm("presidential pardon", "plee");
+		delete rrf;
+			
+		rrf = someRandomIntern.makeForm("error", "kkk");
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
 
 	return (0);
 }

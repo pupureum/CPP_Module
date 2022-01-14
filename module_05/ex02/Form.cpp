@@ -6,7 +6,7 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 01:52:06 by plee              #+#    #+#             */
-/*   Updated: 2022/01/14 22:42:04 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/15 04:32:35 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,14 @@ bool	Form::beSigned(const Bureaucrat& bureaucrat)
 	return (false);
 }
 
+void Form::isExecutable(Bureaucrat const & executor) const
+{
+	if (!this->getIsSigned())
+		throw(NotSignedException("Sign form before execute"));
+	else if (executor.getGrade() > this->getGradeToExecute())
+		throw(GradeTooLowException("Grade is too low to execute form"));
+}
+
 Form::GradeTooHighException::GradeTooHighException(const char* message): _message(message) {}
 
 Form::GradeTooHighException::~GradeTooHighException() throw() {}
@@ -75,6 +83,22 @@ Form::GradeTooLowException::~GradeTooLowException() throw() {}
 const char* Form::GradeTooLowException::what() const throw()
 {
 	return (_message);
+}
+
+Form::NotSignedException::NotSignedException(const char* message): _message(message) {}
+
+Form::NotSignedException::~NotSignedException() throw() {}
+
+const char*   Form::NotSignedException::what() const throw() {
+  return (_message);
+}
+
+Form::ExcuteException::ExcuteException(const char* message): _message(message) {}
+
+Form::ExcuteException::~ExcuteException() throw() {}
+
+const char*   Form::ExcuteException::what() const throw() {
+  return (_message);
 }
 
 std::ostream& operator<<(std::ostream& os, Form& form)

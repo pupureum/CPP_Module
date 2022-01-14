@@ -6,11 +6,11 @@
 #    By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/10 22:40:31 by plee              #+#    #+#              #
-#    Updated: 2022/01/14 22:40:21 by plee             ###   ########.fr        #
+#    Updated: 2022/01/15 04:30:27 by plee             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	form
+NAME	=	intern
 
 CC		=	clang++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
@@ -18,6 +18,10 @@ RM		=	rm -rf
 
 SRCS	=	Bureaucrat.cpp\
 			Form.cpp\
+			ShrubberyCreationForm.cpp\
+			RobotomyRequestForm.cpp\
+			PresidentialPardonForm.cpp\
+			Intern.cpp\
 			main.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
