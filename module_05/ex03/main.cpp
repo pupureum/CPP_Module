@@ -6,7 +6,7 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 00:51:45 by plee              #+#    #+#             */
-/*   Updated: 2022/01/15 05:41:41 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/16 16:15:20 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int main(void)
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << '\n';
+		std::cout << e.what() << std::endl;
 	}
 
 	return (0);
