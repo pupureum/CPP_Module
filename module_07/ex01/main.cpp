@@ -6,7 +6,7 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 01:15:07 by plee              #+#    #+#             */
-/*   Updated: 2022/01/18 01:47:08 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/19 00:51:28 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int main(void)
 	iter(c, 5, print);
 	std::cout << std::endl;
 
-		std::cout << "<string>" << std::endl;
+	std::cout << "<string>" << std::endl;
 	iter(str, 5, print);
 	std::cout << std::endl;
 	
