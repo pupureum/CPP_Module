@@ -6,7 +6,7 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 00:51:45 by plee              #+#    #+#             */
-/*   Updated: 2022/01/14 22:59:32 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/18 17:07:40 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,10 @@ int   main()
 	std::cout << std::endl;
 	plee.signForm(a);
 	std::cout << a << std::endl;
+
+	std::cout << std::endl;
+	plee.signForm(b);
+	std::cout << b << std::endl;
 
 	std::cout << std::endl;
 	plee.upGrade();
