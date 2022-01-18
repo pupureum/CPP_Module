@@ -6,7 +6,7 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 19:01:50 by plee              #+#    #+#             */
-/*   Updated: 2022/01/15 00:05:30 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/18 17:46:16 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,48 +63,5 @@ public:
 };
 
 std::ostream& operator<<(std::ostream& os, Bureaucrat& breaucrat);
-
-
-
-
-// class Bureaucrat
-// {
-// private:
-// 	const std::string	_name;
-// 	int					_grade;
-
-// public:
-// 	// constructor & destructor declaration
-// 	Bureaucrat();
-// 	Bureaucrat(const std::string& name, int _grade);
-// 	Bureaucrat(const Bureaucrat& bureaucrat);
-// 	~Bureaucrat();
-
-// 	// operator overload declaration
-// 	Bureaucrat& operator=(const Bureaucrat& bureaucrat);
-
-// 	// getter & setter declaration
-// 	std::string	getName() const;
-// 	int			getGrade() const;
-
-// 	// other methods declaration
-// 	void		increaseGrade();
-// 	void		decreaseGrade();
-// 	void		signForm(Form& form);
-
-// 	// inner class declaration
-// 	class GradeTooHighException : public std::exception
-// 	{
-// 	public:
-// 		const char* what() const throw();
-// 	};
-// 	class GradeTooLowException : public std::exception
-// 	{
-// 	public:
-// 		const char* what() const throw();
-// 	};
-// };
-// // other overload declaration
-// std::ostream& operator<<(std::ostream& os, const Bureaucrat& bureaucrat);
 
 #endif
