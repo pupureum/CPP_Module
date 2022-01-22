@@ -6,12 +6,14 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 06:25:09 by plee              #+#    #+#             */
-/*   Updated: 2022/01/18 00:20:53 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/23 00:52:10 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WHATEVER_HPP
 # define WHATEVER_HPP
+
+# include <iostream>
 
 template <typename T>
 void swap(T &a, T &b)

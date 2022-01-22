@@ -6,7 +6,7 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 02:11:18 by plee              #+#    #+#             */
-/*   Updated: 2022/01/19 02:26:17 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/23 01:52:27 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int main(void)
 	std::cout << std::endl;	
 	std::cout << "--------------------------------" << std::endl;
 
-	std::cout << "<Stringr>" << std::endl;
+	std::cout << "<String>" << std::endl;
 	Array<std::string> string_arr(3);
 	for (int i = 0; i < 3; i++)
 	{
@@ -61,10 +61,15 @@ int main(void)
 		std::cerr << e.what() << "\n";
 	}
 	std::cout << std::endl;
+	std::cout << "--------------------------------" << std::endl;
 
 	Array<std::string> string_copy(string_arr);
 	print<std::string>(string_arr, 3);
 	std::cout << std::endl;
+	std::cout << "--------------------------------" << std::endl;
+
+	const Array<double> double_arr(3);
+	print(double_arr, 3);
 
 	return (0);
 }

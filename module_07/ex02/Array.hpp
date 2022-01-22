@@ -6,7 +6,7 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 01:48:56 by plee              #+#    #+#             */
-/*   Updated: 2022/01/19 20:08:19 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/23 00:36:52 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,15 @@ public:
 		}
 		return (_data[idx]);
 	};
+
+	const T& operator[](unsigned int idx) const
+	{
+		if (idx >= _size || idx < 0)
+		{
+			throw RangeException();
+		}
+		return (_data[idx]);
+	}
 
 	class RangeException : public std::exception
 	{
