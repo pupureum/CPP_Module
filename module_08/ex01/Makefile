@@ -6,17 +6,18 @@
 #    By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/10 22:40:31 by plee              #+#    #+#              #
-#    Updated: 2022/01/23 21:52:43 by plee             ###   ########.fr        #
+#    Updated: 2022/01/23 22:24:59 by plee             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	easyfind
+NAME	=	span
 
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM		=	rm -rf
 
-SRCS	=	main.cpp
+SRCS	=	span.cpp\
+			main.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 
