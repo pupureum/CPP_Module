@@ -6,7 +6,7 @@
 /*   By: plee <plee@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 02:09:14 by plee              #+#    #+#             */
-/*   Updated: 2022/01/24 03:08:04 by plee             ###   ########.fr       */
+/*   Updated: 2022/01/24 15:48:14 by plee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <iostream>
 # include <stack>
-# include <algorithm>
+# include <list>
 
 template <typename T>
 class MutantStack : public std::stack<T>
